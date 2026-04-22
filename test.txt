@@ -1,0 +1,255 @@
+queries
+
+# derivatives
+compute(derivative, [power, x, 3], Result).
+compute(derivative, [constant, 7], Result).
+compute(derivative, [sin, x], Result).
+compute(derivative, [log, 2, x], Result).
+
+# integration
+compute(integration, [power, x, 3], Result).
+compute(integration, [constant, 5], Result).
+compute(integration, [sin, x], Result).
+compute(integration, [cos, x], Result).
+
+# Limit 
+compute(limit, [f, 2], Result).
+
+# partial derivative 
+compute(partial_derivative, [pow(x, 3), 2, 5], Result).   # Partial derivative of x^3 w.r.t x:
+compute(partial_derivative, [pow(y, 4), 2, 3], Result).   # Partial derivative of y^4 w.r.t y:
+compute(partial_derivative, [pow(y, 4), 2, 3], Result).   # Partial derivative of y^4 w.r.t x: so answer is 0 because of this is treat as a constant.
+
+# second-derivative 
+compute(second_derivative, [power, x, 3], Result).
+function(fx, Function),
+   compute(second_derivative, Function, SecondDeriv).
+
+
+
+% ===== CALCULUS =====
+
+% Derivative - Power Rule
+compute(derivative, [power, x, 3], Result).
+
+% Derivative - Constant Rule
+compute(derivative, [constant, 5], Result).
+
+% Derivative - Trigonometric
+compute(derivative, [sin, x], Result).
+compute(derivative, [cos, x], Result).
+compute(derivative, [tan, x], Result).
+
+% Derivative - Exponential and Logarithmic
+compute(derivative, [exp, x], Result).
+compute(derivative, [ln, x], Result).
+compute(derivative, [log, 2, x], Result).
+
+% Integration - Power Rule
+compute(integration, [power, x, 2], Result).
+
+% Integration - Constant
+compute(integration, [constant, 4], Result).
+
+% Integration - Trigonometric
+compute(integration, [sin, x], Result).
+compute(integration, [cos, x], Result).
+
+% Limit
+compute(limit, [f, 2], Result).
+
+% Partial Derivative
+compute(partial_derivative, [pow(x, 3), 2, 5], Result).   % w.r.t x
+compute(partial_derivative, [pow(y, 3), 2, 5], Result).   % w.r.t y
+
+% Second Derivative
+compute(second_derivative, [add, [power, x, 3], [sin, x]], Result).
+
+% ===== ALGEBRA =====
+
+% Linear Equation: ax + b = 0
+compute(linear_equation, [2, -4], X).
+
+% Quadratic Equation: ax² + bx + c = 0
+compute(quadratic_equation, [1, -3, 2], [Root1, Root2]).
+
+% Cubic Equation: ax³ + bx² + cx + d = 0
+compute(cubic_equation, [1, -6, 11, -6], Root).
+
+% System of 2x2 Linear Equations
+compute(system_of_equations, [[2,3,5],[1,2,3]], [X,Y]).
+
+% ===== FUNCTIONS =====
+
+% Floor Function
+compute(floor_function, 3.7, Result).
+
+% Ceiling Function
+compute(ceiling_function, 3.2, Result).
+
+% Round Function
+compute(round_function, 3.6, Result).
+
+% Absolute Value
+compute(absolute_value, -5, Result).
+
+% Sign Function
+compute(sign_function, -7, Result).
+
+% ===== STATISTICS =====
+
+% Mean
+compute(mean, [2,4,6,8], Result).
+
+% Median
+compute(median, [2,7,4,5,9], Result).
+
+% Mode
+compute(mode, [1,2,2,3,3,3,4], Result).
+
+% Percentile
+compute(percentile, [[1,2,3,4,5], 40], Result).
+
+% Correlation coefficient
+compute(correlation, [[1,2,3],[2,4,6]], Result).
+
+% Variance
+compute(variance, [1,2,3,4], Result).
+
+% Standard Deviation
+compute(standard_deviation, [1,2,3,4], Result).
+
+% Range
+compute(range, [5,2,8,3], Result).
+
+% Z-Score
+compute(z_score, [10, 5, 2], Result).
+
+% ===== VECTORS =====
+
+% Dot Product (2D)
+compute(dot_product, [1,2], [3,4], Result).
+
+% Dot Product (3D)
+compute(dot_product, [1,2,3], [4,5,6], Result).
+
+% Cross Product (3D)
+compute(cross_product, [1,2,3], [4,5,6], [Rx,Ry,Rz]).
+
+% Vector Modulus (2D)
+compute(modulus, [3,4], Result).
+
+% Vector Modulus (3D)
+compute(modulus, [1,2,2], Result).
+
+% Vector Angle (2D)
+compute(vector_angle, [1,0], [0,1], Angle).
+
+% Unit Vector (2D)
+compute(unit_vector, [3,4], [Ux,Uy]).
+
+% Unit Vector (3D)
+compute(unit_vector, [1,2,2], [Ux,Uy,Uz]).
+
+% Vector Projection
+compute(vector_projection, [3,4], [1,0], [Px,Py]).
+
+% ===== COMBINATORICS =====
+
+% Permutation
+compute(permutation, 5, 3, Result).
+
+% Combination
+compute(combination, 5, 3, Result).
+
+% Binomial Coefficient
+compute(binomial_coefficient, 5, 3, Result).
+
+% Factorial
+compute(factorial, 5, Result).
+
+% ===== NUMBER THEORY =====
+
+% GCD
+compute(gcd, [12,18], Result).
+
+% LCM
+compute(lcm, [12,18], Result).
+
+% Prime Check
+compute(prime, 17, Result).
+
+% Modular Arithmetic
+compute(modular_arithmetic, [10,8,6], Result).
+
+% ===== PROBABILITY =====
+
+% Basic Probability
+compute(probability, [3,10], Result).
+
+% Conditional Probability
+compute(conditional_probability, [2,5], Result).
+
+% Bayes Theorem
+compute(bayes_theorem, [0.9,0.1,0.2], Result).
+
+% Expected Value
+compute(expected_value, [[1,0.2],[2,0.5],[3,0.3]], Result).
+
+% ===== LOGARITHM & EXPONENTIAL =====
+
+% Natural Logarithm
+compute(natural_log, 2.718, Result).
+
+% Logarithm with base
+compute(logarithm, [8,2], Result).
+
+% Exponential
+compute(exponential, 2, Result).
+
+% Exponential Growth
+compute(exponential_growth, [100, 0.05, 10], Result).
+
+% Exponential Decay
+compute(exponential_decay, [100, 0.05, 10], Result).
+
+% Power
+compute(power, [2,3], Result).
+
+% ===== TRIGONOMETRY =====
+
+% Sine
+compute(trigonometry_sin, 1.57, Result).
+
+% Cosine
+compute(trigonometry_cos, 1.57, Result).
+
+% Tangent
+compute(trigonometry_tan, 1.57, Result).
+
+% Inverse Trigonometric
+compute(inverse_trig, [sin,0.5], Result).
+compute(inverse_trig, [cos,0.5], Result).
+compute(inverse_trig, [tan,1], Result).
+
+% ===== MATRICES =====
+
+% Matrix Multiplication (2x2)
+compute(matrix_multiplication, [[1,2],[3,4]], [[5,6],[7,8]], Result).
+
+% Matrix Determinant (2x2)
+compute(matrix_determinant, [[1,2],[3,4]], Result).
+
+% Matrix Inverse (2x2)
+compute(matrix_inverse, [[1,2],[3,4]], Result).
+
+% Eigenvalues (2x2 matrix)
+compute(eigenvalue, [[1,2],[3,4]], Result).
+
+% ===== ADVANCED =====
+
+% Fourier Transform
+compute(fourier_transform, [signal, 50], Result).
+
+% Taylor Series
+compute(taylor_series, [sin,0,5], Result).
